@@ -23,6 +23,10 @@ public class Main  {
 
 
             gameStartDialogue();
+            if (m1a.name.equals(m1b.name)){
+                System.out.println("You cannot choose the same monster two times! Please choose again.");
+                gameStartDialogue();
+            }
             battleStart();
             while (playerHealth != 0 && kiHealth != 0){
                 doATurn();
@@ -87,7 +91,7 @@ public class Main  {
 
         private static void spawnKIMonsters() {
             int randint = ThreadLocalRandom.current().nextInt(1, 11);
-            for (int i=0; i<=1; i++){
+            for (int i=0; i<1; i++){
                 switch (randint) {
                     case 1: m1a = new Magmaspider();
                         break;
@@ -99,9 +103,25 @@ public class Main  {
                     case 8: break;
                     case 9: break;
                     case 10: break;
+
                 }
             }
+            for (int i=0; i<1; i++){
+                switch (randint) {
+                    case 1: m1b = new Magmaspider();
+                        break;
+                    case 2: break;
+                    case 4: break;
+                    case 5: break;
+                    case 6: break;
+                    case 7: break;
+                    case 8: break;
+                    case 9: break;
+                    case 10: break;
 
+                }
+            }
+            if (m2a.name.equals(m2b.name)){spawnKIMonsters();}
         }
 
         private static void spawnPlayerMonsters() {
@@ -111,6 +131,20 @@ public class Main  {
                 for (int i=0; i<=1; i++){
                     switch (ma) {
                         case 1: m1a = new Magmaspider();
+                            break;
+                        case 2: break;
+                        case 4: break;
+                        case 5: break;
+                        case 6: break;
+                        case 7: break;
+                        case 8: break;
+                        case 9: break;
+                        case 10: break;
+                    }
+                }
+                for (int i=0; i<=1; i++){
+                    switch (ma) {
+                        case 1: m1b = new Magmaspider();
                             break;
                         case 2: break;
                         case 4: break;
@@ -151,9 +185,14 @@ public class Main  {
         private static void askPlayer() {
             System.out.println("What do you want to do?");
             System.out.println();
-            System.out.println("1:");
-            System.out.println("2:");
+            System.out.println(m1a.name);
+            System.out.println("1: " +m1a.nameA1 + " (" + m1a.descriptionA1 + ")");
+            System.out.println("2: " +m1a.nameA2 + " (" + m1a.descriptionA2 + ")");
+            System.out.println(m1b.name);
+            System.out.println("3: " +m1b.nameA1 + " (" + m1b.descriptionA1 + ")");
+            System.out.println("4: " +m1b.nameA2 + " (" + m1b.descriptionA2 + ")");
             System.out.println();
+
         }
     }
 

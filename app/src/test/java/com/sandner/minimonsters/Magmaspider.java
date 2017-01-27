@@ -6,10 +6,6 @@ package com.sandner.minimonsters;
 
 public class Magmaspider extends Monster {
 
-    public String nameA1 = "Fire Net";
-    public String nameA2 = "Spider Egg";
-    public String descriptionA1 = "If there would be incoming damage this round it will be negated and Magmaspider gets +2 damage for next round.";
-    public String descriptionA2 = "Magmaspiders damage gets a +1 in each round due to a tiny helping Magmaspider. In return, it loses 5 HP.";
 
     public static void main(String[] args) {
 
@@ -20,6 +16,10 @@ public class Magmaspider extends Monster {
         hp = 25;
         rounddmg = 1;
         name = "Magmaspider";
+        nameA1 = "Fire Net";
+        nameA2 = "Spider Egg";
+        descriptionA1 = "If there would be incoming damage this round it will be negated and Magmaspider gets +2 damage for next round.";
+        descriptionA2 = "Magmaspiders damage gets a +1 in each round due to a tiny helping Magmaspider. In return, it loses 5 HP.";
     }
 
     public void a1(){
