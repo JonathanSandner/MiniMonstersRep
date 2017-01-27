@@ -18,6 +18,19 @@ public class Main  {
         public static Monster m2b;
         public static int kiHealth;
         public static int turnNumber = 0;
+        // the following booleans are important for abilities that have to be executed at the end of the round... maybe use list instead?
+        // for Player
+        public static boolean m1aA1LateExecute = false;
+        public static boolean m1aA2LateExecute = false;
+        public static boolean m1bA1LateExecute = false;
+        public static boolean m1bA2LateExecute = false;
+        // for KI
+        public static boolean m2aA1LateExecute = false;
+        public static boolean m2aA2LateExecute = false;
+        public static boolean m2bA1LateExecute = false;
+        public static boolean m2bA2LateExecute = false;
+
+        // ------------------------------------------------------------------
 
         public static void main(String[] args) {
 

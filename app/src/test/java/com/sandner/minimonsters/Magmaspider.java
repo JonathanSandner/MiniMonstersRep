@@ -31,6 +31,7 @@ public class Magmaspider extends Monster {
 
     private void fireNet() {
         //Next incoming damage is "rehealed" and if there is one, next Attack does +2 damage
+
     }
     private void spiderEgg() {
         //Sets hp -5 but theoretically spawns a minispider, which deals +1 damage each turn (randomly)
