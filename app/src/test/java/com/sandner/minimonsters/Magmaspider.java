@@ -13,13 +13,13 @@ public class Magmaspider extends Monster {
 
     public Magmaspider() {
         super();
-        hp = 25;
-        rounddmg = 1;
-        name = "Magmaspider";
-        nameA1 = "Fire Net";
-        nameA2 = "Spider Egg";
-        descriptionA1 = "If there would be incoming damage this round it will be negated and Magmaspider gets +2 damage for next round.";
-        descriptionA2 = "Magmaspiders damage gets a +1 in each round due to a tiny helping Magmaspider. In return, it loses 5 HP.";
+        setHp(25);
+        setRounddmg(1);
+        setName("Magmaspider");
+        setNameA1("Fire Net");
+        setNameA2("Spider Egg");
+        setDescriptionA1("If there would be incoming damage this round it will be negated and Magmaspider gets +2 damage for next round.");
+        setDescriptionA2("Magmaspiders damage gets a +1 in each round due to a tiny helping Magmaspider. In return, it loses 5 HP.");
     }
 
     public void a1(){

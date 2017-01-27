@@ -69,18 +69,18 @@ public class Main  {
 
         private static void printOverview() {
             System.out.println("YOU:");
-            System.out.println("Monster 1:" + m1a.name + m1a.hp + "HP");
-            System.out.println("Monster 2:" + m1b.name + m1b.hp + "HP");
+            System.out.println("Monster 1:" + m1a.name + m1a.getHp() + "HP");
+            System.out.println("Monster 2:" + m1b.name + m1b.getHp() + "HP");
             System.out.println();
             System.out.println("YOUR OPPONENT:");
-            System.out.println("Monster 1:" + m2a.name + m2a.hp + "HP");
-            System.out.println("Monster 2:" + m2b.name + m2b.hp + "HP");
+            System.out.println("Monster 1:" + m2a.name + m2a.getHp() + "HP");
+            System.out.println("Monster 2:" + m2b.name + m2b.getHp() + "HP");
 
         }
 
         private static void battleStart() {
-            playerHealth = m1a.hp + m1b.hp;
-            kiHealth = m2a.hp + m2b.hp;
+            playerHealth = m1a.getHp() + m1b.getHp();
+            kiHealth = m2a.getHp() + m2b.getHp();
         }
 
         private static void gameStartDialogue() {
@@ -199,11 +199,11 @@ public class Main  {
             System.out.println("What do you want to do?");
             System.out.println();
             System.out.println(m1a.name);
-            System.out.println("1: " +m1a.nameA1 + " (" + m1a.descriptionA1 + ")");
-            System.out.println("2: " +m1a.nameA2 + " (" + m1a.descriptionA2 + ")");
+            System.out.println("1: " +m1a.getNameA1() + " (" + m1a.getDescriptionA1() + ")");
+            System.out.println("2: " +m1a.getNameA2() + " (" + m1a.getDescriptionA2() + ")");
             System.out.println(m1b.name);
-            System.out.println("3: " +m1b.nameA1 + " (" + m1b.descriptionA1 + ")");
-            System.out.println("4: " +m1b.nameA2 + " (" + m1b.descriptionA2 + ")");
+            System.out.println("3: " +m1b.getNameA1() + " (" + m1b.getDescriptionA1() + ")");
+            System.out.println("4: " +m1b.getNameA2() + " (" + m1b.getDescriptionA2() + ")");
             System.out.println();
 
         }
