@@ -77,4 +77,11 @@ public class Monster {
     public static void main(String[] args){
 
     }
+
+    public void a1(){
+
+    }
+    public void a2(){
+
+    }
 }

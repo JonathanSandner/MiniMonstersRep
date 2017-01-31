@@ -1,6 +1,11 @@
 package com.sandner.minimonsters; /**
  * Created by Jonathan on 26.01.2017.
  */
+/*001!
+* Neuauslegung als Kartenspiel (Idee Oliver)
+* Jedem Monster ist ein (so in etwa 10 - 20 Karten) Deck zugeteilt. Nach Auswahl der Monster werden die beiden Decks zusammengemischt.
+* So wird es noch strategischer. Einbringung von Konzepten aus yugioh und hearthstone
+ */
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -18,6 +23,10 @@ public class Main  {
         public static Monster m2b;
         public static int kiHealth;
         public static int turnNumber = 0;
+        private static String playerChoiceM1a;
+        private static String playerChoiceM1b;
+        private static String kiChoiceM2a;
+        private static String kiChoiceM2b;
         // the following booleans are important for abilities that have to be executed at the end of the round... maybe use list instead?
         // for Player
         public static boolean m1aA1LateExecute = false;
@@ -181,12 +190,20 @@ public class Main  {
 
 
         private static void printChoices() {
-
+            System.out.println("Choices:");
+            System.out.println();
+            System.out.println("YOU:");
+            System.out.println(m1a.name + ": " + playerChoiceM1a); // Anzeigen der gewählten Fähigkeit Monster 1
+            System.out.println(m1b.name + ": " + playerChoiceM1b); //Anzeigen der gewählten Fähigkeit Monster 2
+            System.out.println();
+            System.out.println("KI:");
+            System.out.println(m2a.name + ": " + kiChoiceM2a);
+            System.out.println(m2b.name + ": " + kiChoiceM2b);
         }
 
 
         private static void execute() {
-
+            // Methoden werden bereits in den ask-Methoden ausgeführt. Wegfinden, diese Zwischenzuspeichern. Das löst auch das Firenet Problem!
         }
 
 
@@ -201,11 +218,29 @@ public class Main  {
             System.out.println(m1a.name);
             System.out.println("1: " +m1a.getNameA1() + " (" + m1a.getDescriptionA1() + ")");
             System.out.println("2: " +m1a.getNameA2() + " (" + m1a.getDescriptionA2() + ")");
+            System.out.println();
+            int aa = scanner.nextInt();
+            switch (aa) {
+                case 1: m1a.a1();
+                        playerChoiceM1a = m1a.getNameA1();
+                    break;
+                case 2: m1a.a2();
+                        playerChoiceM1a = m1a.getNameA2();
+                    break;
+            }
             System.out.println(m1b.name);
             System.out.println("3: " +m1b.getNameA1() + " (" + m1b.getDescriptionA1() + ")");
             System.out.println("4: " +m1b.getNameA2() + " (" + m1b.getDescriptionA2() + ")");
             System.out.println();
-
+            int ab = scanner.nextInt();
+            switch (ab) {
+                case 1: m1a.a1();
+                        playerChoiceM1b = m1b.getNameA1();
+                        playerChoiceM1b = m1b.getNameA2();
+                    break;
+                case 2: m1a.a2();
+                    break;
+            }
         }
     }
 
